@@ -7,6 +7,7 @@ const HeroSection = () => {
     'Amazon',
     'Google',
     'PhonePay',
+    "Ycombinator",
     'Microsoft',
     'Flipkart',
     'Paytm',

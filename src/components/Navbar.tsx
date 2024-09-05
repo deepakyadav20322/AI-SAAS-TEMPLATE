@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Function to handle scroll event
   const handleScroll = () => {
@@ -106,6 +107,10 @@ function Navbar() {
            <span className="text-white font-bold border-2  px-2 py-1 rounded-md border-b-4 border-white">EzSync</span>
            
           </a>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white text-lg px-4 py-2"
+          >
           <svg
             stroke="currentColor"
             fill="currentColor"
@@ -118,7 +123,99 @@ function Navbar() {
           >
             <path d="M432 176H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 272H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16zM432 368H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h352c8.8 0 16 7.2 16 16s-7.2 16-16 16z"></path>
           </svg>
+          </button>
         </div>
+
+        {isMobileMenuOpen && (
+  <motion.div
+    className="lg:hidden bg-black w-full fixed top-20 left-0 right-0 z-40"
+    initial={{ opacity: 0, y: -20 }} 
+    animate={{ opacity: 1, y: 0 }}   
+    exit={{ opacity: 0, y: -20 }}  
+    transition={{ duration: 0.3, ease: "easeOut" }} 
+  >
+    <motion.div
+      className="flex flex-col items-center py-4 space-y-3"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.15, // Delay between each child animation
+          },
+        },
+      }}
+    >
+      {/* Menu Item Variants */}
+      <motion.a
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="text-white text-lg px-4 py-2"
+        href="/features"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        Features
+      </motion.a>
+      <motion.a
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="text-white text-lg px-4 py-2"
+        href="/pricing"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        Pricing
+      </motion.a>
+      <motion.a
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="text-white text-lg px-4 py-2"
+        href="/blog"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        Blog
+      </motion.a>
+      <motion.a
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="text-white text-lg px-4 py-2"
+        href="/contact"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        Contact
+      </motion.a>
+      <motion.a
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="text-white text-lg px-4 py-2"
+        href="/register"
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        Register
+      </motion.a>
+      <motion.button
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="text-black bg-secondary px-4 py-2 rounded-md"
+      >
+        Book a Demo
+      </motion.button>
+    </motion.div>
+  </motion.div>
+)}
+
       </div>
     </motion.nav>
   );
