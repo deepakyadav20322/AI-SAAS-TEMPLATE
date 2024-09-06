@@ -12,6 +12,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+    
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -24,11 +25,16 @@ const config: Config = {
       },
       animation: {
         logo_scroll: 'logo_scroll 35s linear infinite',
+        slide: 'slide 20s linear infinite',
       },
       keyframes: {
         logo_scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        slide: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
     },

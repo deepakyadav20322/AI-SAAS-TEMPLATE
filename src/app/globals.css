@@ -36,5 +36,22 @@ body {
 
 /* ================================================================ */
 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 35s linear infinite;
+}
+
+.overflow-hidden:hover .animate-slide {
+  animation-play-state: paused;
+}
+
 
 

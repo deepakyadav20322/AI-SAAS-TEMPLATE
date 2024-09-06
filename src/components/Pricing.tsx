@@ -41,13 +41,13 @@ const Pricing = () => {
             
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
+            <h3 className={`text-xl font-semibold  mb-2 ${plan.name=='Pro'?'text-blue-600':'text-white'}`}>{plan.name}</h3>
             <p className="text-neutral-400 mb-4 font-semibold text-lg">{billingCycle === "monthly" ? plan.monthlyPrice : plan.yearlyPrice}</p>
             <p className="text-white mb-6">{plan.description}</p>
             <ul className="text-neutral-400 mb-6 space-y-2">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="flex items-center justify-start space-x-2 text-sm">
-                  <span>✔</span>
+                  <span className={`${plan.name=='Pro'?'text-blue-600':""}`}>✔</span>
                   <span>{feature}</span>
                 </li>
               ))}

@@ -26,6 +26,7 @@ export default function Home() {
     <TeamSection/>
     <Contact/>
   
+  
     <Footer/>
      
     </Container>

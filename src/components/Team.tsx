@@ -7,19 +7,19 @@ export const TeamSection = () => {
     {
       name: "Alice Johnson",
       role: "Lead Developer",
-      image: "Images/team3.jpg", // Replace with actual image paths
+      image: "Images/p.png", // Replace with actual image paths
       description: "Expert in full-stack development and AI integration.",
     },
     {
       name: "Michael Lee",
       role: "UI/UX Designer",
-      image: "Images/team2.png",  // Replace with actual image paths
+      image: "Images/M.webp",  // Replace with actual image paths
       description: "Specializes in modern UI/UX designs and user experience.",
     },
     {
       name: "Sarah Williams",
       role: "Project Manager",
-      image: "Images/team2.png", // Replace with actual image paths
+      image: "Images/R.png", // Replace with actual image paths
       description: "Skilled in managing large-scale projects with agility.",
     },
   ];
@@ -58,7 +58,7 @@ export const TeamSection = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-contain opacity-80"
+                className="w-full h-full object-contain opacity-95"
               />
             </div>
             <div className="p-6">

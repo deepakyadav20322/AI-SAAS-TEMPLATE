@@ -13,7 +13,7 @@ const ProofSection = () => {
          
          transition={{ duration: 0.8, delay: 0.1 }}
         >
-        <Image src="/Images/IMG3.png" alt="proof" width={500} height={500} className=' w-[95vw] lg:[60vw] md:w-[75vw] aspect-auto  border-neutral-800 border-2 rounded-md ' />
+        <Image src="/Images/dashboard.avif" alt="proof" width={500} height={500} className=' w-[95vw] lg:[60vw] md:w-[75vw] aspect-auto  border-neutral-800 border-2 rounded-md ' />
   
         </motion.div>
     </Container>
