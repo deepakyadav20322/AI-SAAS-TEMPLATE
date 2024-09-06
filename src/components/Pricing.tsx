@@ -8,7 +8,7 @@ const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
 
   return (
-    <div className="container mx-auto py-16">
+    <section id='#price' className="container mx-auto py-16">
       <h1 className="text-3xl font-bold text-center mb-8">Simple Pricing</h1>
       <p className="text-center text-neutral-400 mb-8">
         Simple pricing for startups, small businesses, medium scale businesses, and enterprises.
@@ -58,7 +58,7 @@ const Pricing = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

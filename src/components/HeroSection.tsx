@@ -16,8 +16,8 @@ const HeroSection = () => {
   return (
     <div className="w-full flex flex-col min-h-[27rem] md:min-h-[35rem] border-green-300  px-4 pt-10 md:pt-20 overflow-hidden ">
       <div className="flex flex-col justify-center items-center text-center gap-y-6 ">
-        <h1 className="text-4xl md:text-6xl font-bold ">
-          Build Your Perfect Resume And Ace your interview with A.I.{" "}
+        <h1 className="text-4xl md:text-6xl font-bold  ">
+          Build Your Perfect Resume And Ace your <span style={{ borderRadius:'100% 0% 100% 0% / 19% 80% 20% 81% '}} className="bg-blue-600 px-2 my-1">interview</span> with A.I.{" "}
         </h1>
 
         <span className="lg:max-w-5xl text-neutral-200">
